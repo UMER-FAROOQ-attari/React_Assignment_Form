@@ -89,13 +89,21 @@ export default SignUp
 export const Login = () =>{
     const [lgnemail , setLgnemail] = useState("");
     const [lgnpassword , setLgnpassword] = useState("");
+    const [msg,setMsg] = useState("")
 function login(e){
     e.preventDefault();
-    console.log(lgnemail,lgnpassword)
-     let email =  localStorage.getItem(email)
-     let password =  localStorage.getItem(password);
-    console.log(email,password)
+     let email =  localStorage.getItem(lgnemail)
+    if(!email){
+        
+        setMsg("pleas signUp , User is not registered");
+        return;
+    }
+    if(email != lgnpassword){
+        setMsg("pleas enter correct Password");
+        return;
+    }
 
+    setMsg("Yes welcom back ")
 }
     return(
 <>
@@ -108,6 +116,7 @@ function login(e){
  <label htmlFor="lgnpassword" className='text-2xl font-bold text-amber-400'>Password</label>
     <input value={lgnpassword} onChange={(e)=>{setLgnpassword(e.target.value)}}  type="password" className='border-2 p-2 rounded-2xl  text-amber-200  bg-black' id="lgnpassword"  placeholder='Pleas Creat Your Password' required/>
         </div>
+        <p className="text-red-500 mt-2">{msg}</p>
     <div className="submit text-center m-3">
     <input type="submit"  className="btn border-2 w-fit bg-black text-amber-200 p-2 rounded-2xl font-medium cursor-pointer" />
 
