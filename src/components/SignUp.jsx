@@ -88,7 +88,7 @@ function submit(e){
     </div>
     </div>
     <p className='text-amber-50'>{`Hy ${form.name} Your email is ${form.email}`}</p>
-<p className='text-amber-50'>if You have a acount already pleas login <Link to='/login'>login</Link></p>
+<p className='text-amber-50'>if You have a acount already pleas <Link className='text-blue-400' to='/login'>login</Link></p>
         </form>
     </div>
 

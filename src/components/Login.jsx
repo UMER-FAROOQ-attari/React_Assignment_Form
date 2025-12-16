@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { useState } from 'react';
+import { Link } from 'react-router';
 const Login = () =>{
     const [lgnemail , setLgnemail] = useState("");
     const [lgnpassword , setLgnpassword] = useState("");
@@ -33,6 +34,7 @@ function login(e){
         <p className="text-red-500 mt-2">{msg}</p>
     <div className="submit text-center m-3">
     <input type="submit"  className="btn border-2 w-fit bg-black text-amber-200 p-2 rounded-2xl font-medium cursor-pointer" />
+<p className='text-amber-50'>if You have not a acount already pleas <Link className='text-blue-400' to='/'>Sign Up</Link></p>
 
     </div>
 

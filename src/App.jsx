@@ -8,11 +8,12 @@ import { Routes, Route } from "react-router-dom";
 const App = () => {
   return (
 <>
+<div className="flex flex-wrap bg-amber-200 justify-center p-5">
+
 <Routes>
   <Route path='/' element={<SignUp />} />
   <Route path='/Login' element={<Login />} />
 </Routes>
-<div className="flex flex-wrap bg-amber-200 justify-center p-5">
 
 
 </div>
